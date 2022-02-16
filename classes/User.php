@@ -1,10 +1,8 @@
 <?php
-class Product
+class User
 {
     protected $email;
     protected $password;
-    protected $premiumMember = false;
-
 
     public function __construct($email, $password)
     {
@@ -48,26 +46,6 @@ class Product
     public function setPassword($password)
     {
         $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of premiumMember
-     */ 
-    public function getPremiumMember()
-    {
-        return $this->premiumMember;
-    }
-
-    /**
-     * Set the value of premiumMember
-     *
-     * @return  self
-     */ 
-    public function setPremiumMember($premiumMember)
-    {
-        $this->premiumMember = $premiumMember;
 
         return $this;
     }

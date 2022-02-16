@@ -1,5 +1,5 @@
 <?php
-class Product
+class Address
 {
     protected $name;
     protected $lastName;

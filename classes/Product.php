@@ -13,11 +13,9 @@ class Product
         protected $feedbackScore;
         protected $faqs;
 
-        public function __construct($sku, $name, $brand, $price, $shippingPrice, $quantity)
+        public function __construct($sku, $price, $shippingPrice, $quantity)
         {
                 $this->sku = $sku;
-                $this->name = $name;
-                $this->brand = $brand;
                 $this->price = $price;
                 $this->shippingPrice = $shippingPrice;
                 $this->quantity = $quantity;
@@ -146,6 +144,28 @@ class Product
         }
 
         /**
+         * Get the value of shippingPrice
+         */ 
+        public function getShippingPrice()
+        {
+                return $this->shippingPrice;
+        }
+
+        /**
+         * Set the value of shippingPrice
+         *
+         * @return  self
+         */ 
+        public function setShippingPrice($shippingPrice)
+        // setto premium member nella funzione e poi faccio:
+        // if get premiumMember allora shipping price = 0, else = 5% del price
+        {
+                $this->shippingPrice = $shippingPrice;
+
+                return $this;
+        }
+
+        /**
          * Get the value of images
          */
         public function getImages()
@@ -224,4 +244,5 @@ class Product
 
                 return $this;
         }
+
 }

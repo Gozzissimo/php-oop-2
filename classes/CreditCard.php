@@ -1,5 +1,5 @@
 <?php
-class CrediCard
+class CreditCard
 {
         protected $number;
         protected $expirationMonth;
